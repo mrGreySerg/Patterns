@@ -1,14 +1,18 @@
 package ru.serg.patterns.duck;
 
-public class RedHeadDuck extends Duck implements Flyable {
+import ru.serg.patterns.duck.fly.FlyWithWings;
+import ru.serg.patterns.duck.quack.Quake;
+
+public class RedHeadDuck extends Duck {
+
+    public RedHeadDuck() {
+        quakeBehavior = new Quake();
+        flyBehavior = new FlyWithWings();
+    }
 
     @Override
     public void display() {
 
     }
 
-    @Override
-    public boolean fly() {
-        return false;
-    }
 }

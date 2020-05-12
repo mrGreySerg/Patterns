@@ -1,14 +1,17 @@
 package ru.serg.patterns.duck;
 
-public class RubberDuck extends Duck implements Flyable {
+import ru.serg.patterns.duck.fly.FlyNoWay;
+import ru.serg.patterns.duck.quack.MuteQuake;
 
+public class RubberDuck extends Duck {
+
+    public RubberDuck() {
+        quakeBehavior = new MuteQuake();
+        flyBehavior = new FlyNoWay();
+    }
     @Override
     public void display() {
         System.out.println("This is RubberDuck");
-    }
-
-    public boolean fly() {
-        return false;
     }
 
 }
