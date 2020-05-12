@@ -1,14 +1,14 @@
 package ru.serg.patterns.duck;
 
-public class RedHeadDuck extends Duck implements Flyable {
+public class RubberDuck extends Duck implements Flyable {
 
     @Override
     public void display() {
-
+        System.out.println("This is RubberDuck");
     }
 
-    @Override
     public boolean fly() {
         return false;
     }
+
 }

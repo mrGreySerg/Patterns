@@ -1,12 +1,12 @@
 package ru.serg.patterns.duck;
 
-abstract class Duck {
+ abstract class Duck {
 
-    public  void quack() {
+    public void quack() {
         System.out.println("Can quack");
     };
 
-    public  void swim() {
+    public void swim() {
         System.out.println("Can swim");
     };
 
